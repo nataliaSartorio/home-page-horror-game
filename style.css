@@ -1,0 +1,186 @@
+/* formatar a pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+ul {
+list-style: none;
+
+}
+
+/* imagem de perfil */
+header {
+    margin-top: 32px; /* padding-top faz a mesma coisa */
+    height: calc(120px + 32px);
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+   
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+
+    /* efeito transition foto */
+    transition: transform .3s;
+}
+ /* para dar efeito ao pasar o mouse em cima da foto de perfil */
+header div:hover {
+    transform: scale(1.1);
+}
+
+header div img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* outras configuracoes da pag */
+
+body {
+    background-image: url(./assets/gp2.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+    body * {
+
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        line-height: 160%;
+    }
+
+main * {
+
+   /* border: 1px solid red; */
+}
+
+main {
+    max-width: 500px;
+    width: 90%;
+    margin: 32px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+    /* pode usar tambem para fazer o uso do gap
+        display: grid;
+        gap: 24px;/*
+
+
+/* fontes e cartao de fundo */
+
+section{
+    color: #A1A1AA;
+
+    /* borda com multiplas cores */
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+
+/* cartao de fundo */
+section div {
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+
+
+    /* quando for apenas uma cor 
+    border-top: 4px solid red; */
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 16px;
+
+    margin-top: 24px;
+}
+
+/* efeito transition foto */
+section ul li {
+    transition: transform .3s;
+}
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+.games-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img {
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid #443E54 ;
+}
+
+/* animation foto de perfil */
+
+header div {
+    animation: fromTop .7s .4s backwards;
+   
+}
+
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* animation ul */
+
+main section {
+    animation: fromBottom .7s .2s backwards;
+}
+
+main section:nth-child(1) { 
+    animation-delay: 0;
+}
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
